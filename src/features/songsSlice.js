@@ -3,7 +3,9 @@ import axios from "axios";
 
 export const fetchSongs = () => async (dispatch) => {
   try {
-    const response = await axios.get("http://localhost:3001/songs");
+    const response = await axios.get(
+      "https://mymusic-server.onrender.com/songs"
+    );
     dispatch(setSongs(response.data));
   } catch (error) {
     console.log(error);
@@ -21,10 +23,22 @@ export const songsSlice = createSlice({
     },
     deleteSong: (state, action) => {
       const id = action.payload;
-      axios.delete(`http://localhost:3001/delete/${id}`);
+      axios.delete(`https://mymusic-server.onrender.com/delete/${id}`);
       state.value = state.value.filter((song) => song.id !== id);
     },
     updateSong: (state, action) => {
+      const id = "";
+      const newTitle = "";
+      const newArtist = "";
+      const newAlbum = "";
+      const newGenre = "";
+      axios.put("https://mymusic-server.onrender.com/update", {
+        id: id,
+        newTitle: newTitle,
+        newArtist: newArtist,
+        newAlbum: newAlbum,
+        newGenre: newGenre,
+      });
       state.value.forEach((song) => {
         if (song.id === action.payload.id) {
           song.title = action.payload.title;

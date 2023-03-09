@@ -36,7 +36,7 @@ function Home() {
 
   useEffect(
     (id) => {
-      Axios.get("http://localhost:3001/read").then((response) => {
+      Axios.get("https://mymusic-server.onrender.com/read").then((response) => {
         dispatch(setSongs(response.data));
       });
     },
@@ -48,7 +48,7 @@ function Home() {
   }, [dispatch]);
 
   const update = (id) => {
-    Axios.put("http://localhost:3001/update", {
+    Axios.put("https://mymusic-server.onrender.com/update", {
       id: id,
       newTitle: newTitle,
       newArtist: newArtist,
@@ -58,7 +58,7 @@ function Home() {
   };
 
   const remove = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`);
+    Axios.delete(`https://mymusic-server.onrender.com/delete/${id}`);
   };
 
   return (
@@ -144,7 +144,7 @@ function Home() {
         <div className="addSongs">
           <button
             onClick={() => {
-              Axios.post("http://localhost:3001/insert", {
+              Axios.post("https://mymusic-server.onrender.com/insert", {
                 title: title,
                 artist: artist,
                 album: album,
