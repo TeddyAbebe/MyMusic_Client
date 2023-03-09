@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(12, 11, 16);
+  color: #ccc;
+  padding-top: 20px;
+  position: sticky;
+  font-family: "Times New Roman", Times, serif;
+}
+.home {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgb(12, 11, 16);
+  color: #ccc;
+  padding: 50px;
+}
+
+.addSongs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(33, 33, 43);
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 30%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 39px 40px 0 40px;
+  position: sticky;
+  top: 0;
+}
+
+.addSongs button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addSongs input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.displaySongs {
+  margin-top: 10px;
+  width: 30%;
+  margin-left: 20px;
+}
+.displaySongs_container {
+  padding: 10px 10px 0 10px;
+  margin-top: 20px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: rgb(33, 33, 43);
+}
+.displaySongs .updateSongs {
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: rgb(33, 33, 43);
+}
+.list {
+  font-size: medium;
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: rgb(50, 50, 50);
+
+  border-radius: 30px;
+}
+.list h3 {
+  color: #05a9ea;
+}
+.updateButton button {
+  background-color: #f5ed06;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteSong button {
+  background-color: #f40000;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.displaySongs input {
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.stats {
+  margin: 39px 10px;
+  background-color: rgb(50, 50, 50);
+  width: 30%;
+  border-radius: 30px;
+  padding-top: 50px;
+  position: sticky;
+  top: 0;
+  height: 300px;
+}
+.stats p {
+  font-size: 20px;
+  margin: 10px;
+  color: #faee05;
+  font-family: "Times New Roman", Times, serif;
+}
+.stats h2 {
+  color: #05ea8e;
+}
