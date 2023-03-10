@@ -68,7 +68,7 @@ function Home() {
       </div> */}
 
       <div className="home">
-        <div className="displaySongs">
+        {/* <div className="displaySongs">
           {songsList.map((song) => (
             <div key={song._id} className="displaySongs_container">
               <div className="list">
@@ -139,7 +139,7 @@ function Home() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="addSongs">
           <button
