@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchSongs = () => async (dispatch) => {
-  try {
-    const response = await axios.get(
-      "https://mymusic-server.onrender.com/songs"
-    );
-    dispatch(setSongs(response.data));
-  } catch (error) {
-    console.log(error);
-  }
-};
+// export const fetchSongs = () => async (dispatch) => {
+//   try {
+//     const response = await axios.get(
+//       "https://mymusic-server.onrender.com/songs"
+//     );
+//     dispatch(setSongs(response.data));
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 export const songsSlice = createSlice({
   name: "songs",
