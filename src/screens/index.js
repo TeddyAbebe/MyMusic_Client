@@ -68,7 +68,7 @@ function Home() {
       </div> */}
 
       <div className="home">
-        {/* <div className="displaySongs">
+        <div className="displaySongs">
           {songsList.map((song) => (
             <div key={song._id} className="displaySongs_container">
               <div className="list">
@@ -139,9 +139,9 @@ function Home() {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
 
-        <div className="addSongs">
+        {/* <div className="addSongs">
           <button
             onClick={() => {
               Axios.post("https://mymusic-server.onrender.com/insert", {
@@ -189,7 +189,7 @@ function Home() {
               setGenre(e.target.value);
             }}
           ></input>
-        </div>
+        </div> */}
 
         {/* <div className="stats">
           <Stats songsList={songsList} />
