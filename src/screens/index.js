@@ -10,8 +10,8 @@ import {
   setSongs,
   fetchSongs,
 } from "../features/songsSlice";
-// import Stats from "./Stats";
-// import Header from "./Header";
+import Stats from "./Stats";
+import Header from "./Header";
 
 function Home() {
   const dispatch = useDispatch();
@@ -63,9 +63,9 @@ function Home() {
 
   return (
     <div>
-      {/* <div className="header">
+      <div className="header">
         <Header />
-      </div> */}
+      </div>
 
       <div className="home">
         <div className="displaySongs">
@@ -141,7 +141,7 @@ function Home() {
           ))}
         </div>
 
-        {/* <div className="addSongs">
+        <div className="addSongs">
           <button
             onClick={() => {
               Axios.post("https://mymusic-server.onrender.com/insert", {
@@ -189,11 +189,11 @@ function Home() {
               setGenre(e.target.value);
             }}
           ></input>
-        </div> */}
+        </div>
 
-        {/* <div className="stats">
+        <div className="stats">
           <Stats songsList={songsList} />
-        </div> */}
+        </div>
       </div>
     </div>
   );
