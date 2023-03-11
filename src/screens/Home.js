@@ -7,7 +7,7 @@ import {
   // deleteSong,
   // updateSong,
   setSongs,
-  // fetchSongs,
+  fetchSongs,
 } from "../features/songsSlice";
 import Stats from "./Stats";
 import Header from "./Header";
@@ -26,12 +26,12 @@ function Home() {
   const [newAlbum, setNewAlbum] = useState("");
   const [newGenre, setNewGenre] = useState("");
 
-  // const newSong = {
-  //   title: title,
-  //   artist: artist,
-  //   album: album,
-  //   genre: genre,
-  // };
+  const newSong = {
+    title: title,
+    artist: artist,
+    album: album,
+    genre: genre,
+  };
 
   useEffect(
     (id) => {
@@ -42,9 +42,9 @@ function Home() {
     [dispatch]
   );
 
-  // useEffect(() => {
-  //   dispatch(fetchSongs());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchSongs());
+  }, [dispatch]);
 
   const update = (id) => {
     Axios.put("https://mymusic-server.onrender.com/update", {
@@ -149,9 +149,9 @@ function Home() {
                 album: album,
                 genre: genre,
               });
-              // dispatch(addSong(newSong)).then(() => {
-              //   dispatch(fetchSongs());
-              // });
+              dispatch(addSong(newSong)).then(() => {
+                dispatch(fetchSongs());
+              });
             }}
           >
             Add Music
