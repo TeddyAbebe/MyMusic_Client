@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  // addSong,
+  addSong,
   // deleteSong,
   // updateSong,
   setSongs,
@@ -68,7 +68,7 @@ function Home() {
 
       <div className="home">
         <div className="displaySongs">
-          {songsList.map((song) => (
+          {songsList?.map((song) => (
             <div key={song._id} className="displaySongs_container">
               <div className="list">
                 <h3>{song.title}</h3>
