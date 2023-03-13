@@ -4,9 +4,9 @@ import "./home.css";
 function Stats({ songsList }) {
   const totalSongs = songsList.length;
 
-  const totalArtists = new Set(songsList?.map((song) => song.artist)).size;
-  const totalAlbums = new Set(songsList?.map((song) => song.album)).size;
-  const totalGenres = new Set(songsList?.map((song) => song.genre)).size;
+  const totalArtists = new Set(songsList.map((song) => song.artist)).size;
+  const totalAlbums = new Set(songsList.map((song) => song.album)).size;
+  const totalGenres = new Set(songsList.map((song) => song.genre)).size;
 
   return (
     <div>
